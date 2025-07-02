@@ -6,7 +6,7 @@ jobs:
   tj-actions-simulation:
     runs-on: ubuntu-22.04
     steps:
-      - uses: step-security/harden-runner@rc
+      - uses: h0x0er/harden-runner@int
         with:
          egress-policy: audit
      
@@ -79,7 +79,7 @@ jobs:
   pytorch-simulation:
     runs-on: ubuntu-latest
     steps:
-    - uses: step-security/harden-runner@rc
+    - uses: h0x0er/harden-runner@int
       with:
          egress-policy: audit
     - name: Checkout
@@ -92,7 +92,7 @@ jobs:
   reverse-shell: 
     runs-on: ubuntu-latest
     steps:
-      - uses: step-security/harden-runner@rc
+      - uses: h0x0er/harden-runner@int
         with:
           egress-policy: audit
 
@@ -102,7 +102,7 @@ jobs:
   privileged-conatiner:
     runs-on: ubuntu-latest
     steps:
-      - uses: step-security/harden-runner@rc
+      - uses: h0x0er/harden-runner@int
         with:
           egress-policy: audit
 
@@ -113,7 +113,7 @@ jobs:
   handle-private-key:
     runs-on: ubuntu-latest
     steps:
-    - uses: step-security/harden-runner@rc
+    - uses: h0x0er/harden-runner@int
       with:
          egress-policy: audit
     - name: Checkout code
@@ -135,7 +135,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: step-security/harden-runner@rc
+    - uses: h0x0er/harden-runner@int
       with:
          egress-policy: audit
     - name: Checkout code
@@ -144,7 +144,7 @@ jobs:
   unauthorized-outbound-call:
     runs-on: ubuntu-latest
     steps:
-    - uses: step-security/harden-runner@rc
+    - uses: h0x0er/harden-runner@int
       with:
          egress-policy: block
          allowed-endpoints: >
@@ -193,7 +193,7 @@ jobs:
     # echo "All 100 baseline runs triggered!"
     runs-on: ubuntu-latest
     steps:
-    - uses: step-security/harden-runner@rc
+    - uses: h0x0er/harden-runner@int
       with:
          egress-policy: audit
          
